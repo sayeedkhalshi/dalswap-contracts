@@ -9,6 +9,7 @@ import {StdCheats} from "forge-std/StdCheats.sol";
 
 contract UniswapDeployer is Script, StdCheats{
     function run() public {
+        vm.startBroadcast();
         deployCodeTo(
             "UniswapV2Factory.sol:UniswapV2Factory",
             abi.encode(0x713b8F6E2e42C0481E8B2A4095A4f878BF932716),
@@ -29,6 +30,7 @@ contract UniswapDeployer is Script, StdCheats{
             ),
             0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
         );
+        vm.stopBroadcast();
 
     }
 }
