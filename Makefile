@@ -5,6 +5,9 @@ build:; forge build
 deploy-zkscam:
 	forge script script/UniswapDeployer.s.sol:UniswapDeployer --rpc-url $(ZKSCAM_RPC) --account dexKey --broadcast --legacy
 
+deploy-linea-sepolia: 
+	forge script script/UniswapDeployer.s.sol:UniswapDeployer --rpc-url $(LINEA_SEPOLIA_RPC) --account airdropKey --broadcast --legacy
+
 deploy-sepolia:
 	forge script script/UniswapDeployer.s.sol:UniswapDeployer --rpc-url $(SEPOLIA_RPC) --account aidropAccountKey --broadcast --legacy
 
